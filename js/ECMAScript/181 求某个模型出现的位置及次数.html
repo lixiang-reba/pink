@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sort(str) {
+            let input = prompt('请输入查找的字母：');
+            let index = str.indexOf(input);
+            let j = 0;
+            while (index != -1) {
+                console.log(index);
+                j++;
+                index = str.indexOf(input, index + 1);
+            };
+            return '' + input + '出现了' + j + '次';
+        };
+        console.log(sort('accededccc'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

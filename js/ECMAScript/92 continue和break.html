@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                console.log('这个包子有虫子，扔掉');
+                continue; // 跳出本次循环，跳出的是第3次循环
+            }
+            console.log('我正在吃第' + i + '个包子呢');
+        }
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break; // 直接退出整个for 循环，跳到整个for下面的语句
+            }
+            
+            console.log('我正在吃第' + i + '个包子呢');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

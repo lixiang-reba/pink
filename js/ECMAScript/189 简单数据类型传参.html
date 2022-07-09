@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 把x在栈空间里的值复制了一份给形参  所以形参变了不会影响实参
+        function fn(a) {
+            a++;
+            console.log(a);
+        }
+        var x = 10;
+        fn(x);
+        console.log(x);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

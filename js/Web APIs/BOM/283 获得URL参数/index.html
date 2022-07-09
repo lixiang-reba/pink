@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // console.log(location.search);
+        // var div = document.querySelector('div');
+        // // 1 去掉？substr(开始的位置，截取几个字符)
+        // var params = location.search.substr(1);
+        // console.log(params);
+        // // 2 把字符串分割为数组 split()
+        // var arr = params.split('=');
+        // console.log(arr);
+        // div.innerHTML = arr[1] + '是华子恺的舔狗';
+        let div = document.querySelector('div');
+        let answer = location.search.substr(7);
+        div.innerHTML = answer + '是hzk的舔狗';
+    </script>
+</body>
+
+</html>

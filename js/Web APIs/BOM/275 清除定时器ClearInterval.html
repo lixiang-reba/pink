@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="begin">开</button>
+    <button class="stop">停</button>
+    <script>
+        var time = null;
+        var begin = document.querySelector('.begin');
+        var stop = document.querySelector('.stop');
+        begin.addEventListener('click', function () {
+            time = setInterval(function () {
+                console.log('lxnb');
+            }, 1000)
+        })
+        stop.addEventListener('click',function(){
+            clearInterval(time);
+        })
+    </script>
+</body>
+
+</html>

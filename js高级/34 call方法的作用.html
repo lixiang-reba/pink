@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JavaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部 this 的指向问题，常用的有 bind()、call()、apply() 三种方法。-->
+    <!-- 
+        调用这个函数，并修改函数运行时的this指向 
+        fun.call(thisArg , arg1 ,arg2 , ...)
+        thisArg :当前调用函数this的指向对象
+        arg1 , arg2 :传递的其他参数
+    -->
+    <script>
+        function fn(x, y) {
+            console.log(x + y);
+            console.log(this);
+        }
+        var o = {
+            name: 'hxl'
+        }
+        // 1 可以调用函数 2 改变函数的this指向
+        console.log(fn.prototype);
+        fn.call(o, 1, 2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+@baseFont: 50px;
+html {
+    font-size: @baseFont;
+}
+@border: 5px + 5;
+div {
+    width: 200px - 50;
+    height: 200px * 2;
+    border: @border solid red;
+}
+img {
+    width: 82rem / @baseFont;
+}
+// 左右运算符必须空格隔开
+// 两个数运算  有一个有单位即可
+// 如果两个都有单位 则以第一个单位为准

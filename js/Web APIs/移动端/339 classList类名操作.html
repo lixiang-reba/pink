@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one two"></div>
+    <button>开关灯</button>
+    <script>
+        var div = document.querySelector('.one');
+        // 伪数组
+        console.log(div.classList);
+        console.log(div.classList[0]);
+        // 1 添加类名 优点：追加类名 不会覆盖以前的 与className不同
+        div.classList.add('three');
+        // 2 删除
+        div.classList.remove('one');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // 3 切换:原来没有就添加进去 原来有就删掉
+            document.body.classList.toggle('bg');
+        })
+
+    </script>
+</body>
+
+</html>

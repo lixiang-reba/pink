@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        // 构造函数里面有一个原型对象 叫做 prototype
+        // 公共属性（简单数据类型）放在构造函数中 公共方法放在原型对象上
+        Star.prototype.sing = function() {
+            console.log('我会唱歌');
+        }
+        var lxx = new Star('李响', 18);
+        var xh = new Star('张晓航', 180);
+        console.log(lxx);  //对象身上系统自动添加一个_proto_指向我们构造函数的原型对象prototype
+        console.log(Star.prototype);
+        console.log(lxx.__proto__);
+    </script>
+</body>
+</html>

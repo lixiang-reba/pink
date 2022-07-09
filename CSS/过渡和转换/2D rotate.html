@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 150px;
+            height: 40px;
+            border: 1px solid grey;
+        }
+        div::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            /* transform: rotate(45deg); */
+            /* 2D 转换中心点 transform-origin */
+            /* transform-origin: top right; */
+            transform-origin: 100% 0;
+            transition: all 3s;
+        }
+        div:hover::after {
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.替换字符 只会替换第一个
+        var str = 'lxx';
+        console.log(str.replace('x', 'X'));
+        // 有一个字符串 要求把里面的x全部替换为X
+        var str1 = 'lxxxxx';
+        while (str1.indexOf('x') !== -1) {
+            str1 = str1.replace('x', 'X');
+        }
+        console.log(str1);
+        // 2. 字符串转换为数组
+        var str2 = 'lx,xh,cj';
+        // 字符串用的什么分隔符  split就用什么
+        console.log(str2.split(','));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

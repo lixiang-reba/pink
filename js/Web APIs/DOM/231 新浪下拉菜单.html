@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?7kkyc2');
+            src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+                url('fonts/icomoon.woff?7kkyc2') format('woff'),
+                url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            margin: 100px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav li {
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .nav>li {
+            float: left;
+            text-align: center;
+        }
+
+        .nav>li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .nav>li ul li:hover {
+            background-color: pink;
+        }
+
+        .nav>li a::after {
+            content: '\e91e';
+            font-family: 'icomoon';
+            margin-left: 5px;
+        }
+
+        .nav>li ul {
+            display: none;
+        }
+
+        .nav>li ul li {
+            border: 1px solid red;
+            border-top: 0;
+            text-align: left;
+            padding-left: 7px;
+        }
+
+        .nav>li:hover {
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>lxnb</li>
+                <li>lxnb</li>
+                <li>lxnb</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>lxnb</li>
+                <li>lxnb</li>
+                <li>lxnb</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>lxnb</li>
+                <li>lxnb</li>
+                <li>lxnb</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var nav = document.querySelector('.nav');
+        var pull = nav.children;
+        for (var i = 0; i < pull.length; i++) {
+            pull[i].onmouseover = function () {
+                this.children[1].style.display = 'block';
+                this.children[0].style.color = 'red';
+            }
+            pull[i].onmouseout = function () {
+                this.children[1].style.display = 'none';
+                this.children[0].style.color = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

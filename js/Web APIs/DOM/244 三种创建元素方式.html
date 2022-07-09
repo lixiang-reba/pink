@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script>
+        // 三种创建方式区别
+        // 1.document.write() 会导致页面重绘 很少使用
+        document.write('<div>12</div>');
+        // 2 innerHTML   
+        var inner = document.querySelector('.inner');
+        // (1) 字符串拼接 效率极低
+        // for (var i = 0; i < 5; i++) {
+        //     inner.innerHTML += 'lxnb ';
+        // }
+        // (2) 放入数组中 再将数组转换为字符串 效率最高
+        var arr = [];
+        for (var i = 0; i < 5; i++) {
+            arr.push('lxnb');
+        }
+        inner.innerHTML = arr.join(' ');
+        // 3 document.creatElement() 效率第二高
+        var create = document.querySelector('.create');
+        for (var i = 0; i < 100; i++) {
+            var a = document.createElement('a');
+            // a.innerHTML = 'lxxyyds';
+            create.appendChild(a);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* sacle缩放最大的优势：可以设置转换中心点缩放，默认以中心点缩放的，而且不影响其他盒子 */
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            transition: all 2s;
+            margin: 0 auto;
+            transform-origin: top right;
+        }
+        div:hover {
+            transform: scale(2,2);
+        }
+    </style>
+</head>
+<body>
+    <div></div>1223
+</body>
+</html>

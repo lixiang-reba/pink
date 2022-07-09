@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/区别.jpg" alt="">
+    <div class="box" style="width: 200px;"></div>
+    <script>
+        var box =document.querySelector('.box');
+        console.log(box.offsetWidth);
+        console.log(box.style.width);
+        // box.offsetWidth = '300px';  offset是只读的 不能更改元素值
+        box.style.width ='300px';
+    </script>
+</body>
+
+</html>

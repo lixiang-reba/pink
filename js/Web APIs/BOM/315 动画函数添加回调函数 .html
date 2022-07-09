@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn500">跑到500</button>
+    <button class="btn800">跑到800</button>
+    <span></span>
+    <script>
+        // 回调函数原理：函数可以作为一个参数。将这个函数作为参数传到另一个函数里面，当那个函数执行完之后，再执行传进去的这个函数，这个过程就叫做回调。
+        // 回调函数写的位置：定时器结束的位置。
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    callback && callback();
+                }
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 15)
+        }
+        var span = document.querySelector('span');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        btn500.addEventListener('click', function () {
+            animate(span, 500);
+        })
+        btn800.addEventListener('click', function () {
+            animate(span, 800, function () {
+                span.style.backgroundColor = 'red';
+            });
+        })
+    </script>
+</body>
+
+</html>

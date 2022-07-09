@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 局部变量比较节约内存资源
+        // 全局变量 在全局下都可以使用 包括函数内部 但不建议使用
+        // 在函数内部未声明 直赋值的变量也属于全局变量
+        var num = 10;
+        console.log(num);
+        function fn() {
+            console.log(num);
+        }
+        fn();
+        // 局部变量 函数内部的变量
+        function fun(aru) {
+            // num1只能在函数内部使用
+            var num1 = 10;
+            num2 = 20;
+        }
+        fun();
+        console.log(num2);
+        // not defined
+        console.log(num1);
+        // 函数的形参是局部变量
+        console.log(aru);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

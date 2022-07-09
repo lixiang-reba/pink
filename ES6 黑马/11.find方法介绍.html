@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>find方法</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var ary = [{
+			id: 1,
+			name: '张三'
+		}, {
+			id: 2,
+			name: '李四'
+		}];
+		// Array.find((item,index)=>{})
+		// item是元素本身  index是索引号
+		// find方法  循环数组元素 每次循环都会调用函数 直至找出第一个符合条件的元素 否则返回undefined
+		let target = ary.find(item => item.id == 2)
+		// let target = ary.find(item => item.id == 3);
+		console.log(target)
+	</script>
+</body>
+
+</html>

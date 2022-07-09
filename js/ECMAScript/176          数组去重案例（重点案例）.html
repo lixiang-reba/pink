@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 封装一个去重的数组
+        // function unique(arr) {
+        //     var newArr = [];
+        //     for (i = 0; i < arr.length; i++) {
+        //         if (newArr.indexOf(arr[i]) == -1) {
+        //             newArr.push(arr[i]);
+        //         }
+        //     }
+        //     return newArr;
+        // }
+        // var demo = unique(['lx', 'lx'])
+        // console.log(demo);
+        function unique(arr) {
+            let arr1 = [];
+            for(let i = 0; i<arr.length-1;i++) {
+                if(arr1.indexOf(arr[i]) === -1) {
+                    arr1.push(arr[i])
+                }
+            }
+            return arr1;
+        }
+        console.log(unique([1, 1, 2, 22, 22, 3]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

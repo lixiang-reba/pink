@@ -1,0 +1,14 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    p {
+        color: red;
+        font-size: 20px;
+        // 内层选择器的前面没有 & 符号，则它被解析为父选择器的后代；
+        // 如果有 & 符号，它就被解析为父元素自身或父元素的伪类。
+        &:hover {
+            color: aqua;
+        }
+    }
+}

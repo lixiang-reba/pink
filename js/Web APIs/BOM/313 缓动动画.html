@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    思路：
+    让盒子每次移动的距离慢慢变小，速度就会慢慢落下来。
+    核心算法：(目标值 - 现在的位置) / 10 做为每次移动的距离步长
+    停止的条件是：让当前盒子位置等于目标位置就停止定时器  
+    注意步长值需要取整   
+    -->
+    <button class="btn500">跑到500</button>
+    <button class="btn800">跑到800</button>
+    <span></span>
+    <script>
+        function animate(obj, distance) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var step = (distance - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == distance) {
+                    clearInterval(obj.timer);
+                } else {
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }
+            }, 15);
+        }
+        var span = document.querySelector('span');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        btn500.addEventListener('click', function() {
+            animate(span, 500);
+        })
+        btn800.addEventListener('click', function() {
+            animate(span, 800);
+        })
+    </script>
+</body>
+</html>

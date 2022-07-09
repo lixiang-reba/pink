@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        箭头函数适合与this无关的回调:定时器 数组的方法
+        不适合与this有关的回调:事件回调 对象的方法
+     -->
+    <div id="ad"></div>
+    <script>
+        // 1 点击div  2s后变成粉色
+        let ad = document.querySelector('#ad');
+        ad.addEventListener('click', function () {
+            setTimeout(() => {
+                this.style.backgroundColor = 'pink';
+            }, 2000);
+        })
+        // 2 从数组中返回偶数元素
+        const arr = [1, 2, 3, 45, 6, 7, 8];
+        // let arr1  = arr.filter(function (value) {
+        //     return value % 2 == 0;
+        // })
+        let arr1 = arr.filter(value => value % 2 == 0);
+        console.log(arr1);
+    </script>
+</body>
+
+</html>

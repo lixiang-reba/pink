@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>跑</button>
+    <div></div>
+    <script>
+        function animate(obj, distance) {
+            // 当我们不断点击按钮 就会同时开始很多定时器 元素的速度就会越来越快 所以要先清除定时器
+            clearInterval(obj.timer);
+            // 给不同元素记录不同定时器
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= distance) {
+                    clearInterval(obj.timer);
+                } else {
+                      obj.style.left = div.offsetLeft + 10 + 'px';
+                }
+            }, 30);
+        }
+        var div = document.querySelector('div');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            animate(div, 1000);
+        })
+    </script>
+</body>
+
+</html>

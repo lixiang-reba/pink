@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // arguments储存了所有的实参  以伪数组的形式展现
+        // 伪书组并不是真正意义上的数组
+        // 1 具有数组的length属性
+        // 2 按照索引的方式进行存储
+        // 3 没有真正数组的一些方法 如pop() push()等等
+        function fn() {
+            console.log(arguments);
+            console.log(arguments.length);
+            console.log(arguments[2]);
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        fn(2, 23, 34);
+        // 求任意个数的最大值
+        function getMax() {
+            var max = arguments[0];
+            for (i = 1; i < arguments.length; i++) {
+                if (max < arguments[i]) {
+                    max = arguments[i];
+                }
+            }
+            return(max);
+        }
+        var res = getMax(1, 23, 214, 23, 35);
+        alert(res);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

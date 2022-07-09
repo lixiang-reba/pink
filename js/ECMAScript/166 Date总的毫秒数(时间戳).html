@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 获得距离1970年1月1日过了多少毫秒
+        // 方法一
+        var date = new Date();
+        console.log(date.valueOf());
+        console.log(date.getTime());
+        // 方法二 最常用写法
+        var date1 = +new Date();
+        console.log(date1);
+        // 方法三
+        console.log(Date.now());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow: auto;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+        华子恺屌炸了
+    </div>
+    <img src="img/scroll1.jpg" alt="">
+    <img src="img/scroll2.jpg" alt="">
+    <script>
+        var div = document.querySelector('div');
+        // 不含边框 不带单位
+        console.log(div.scrollHeight);
+        // 只要滚动条变化就会触发
+        div.addEventListener('scroll', function() {
+            console.log(div.scrollTop);
+        })
+    </script>
+</body>
+</html>

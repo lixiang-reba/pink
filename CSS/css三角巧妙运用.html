@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            border-width: 100px 50px 0 0;
+            border-style: solid;
+            border-color: transparent red transparent transparent;
+        }
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            line-height: 24px;
+            text-align: center;
+        }
+        .miaosha {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+        }
+        .miaosha i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-width: 24px 12px 0 0;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+        }
+        .origin {
+            color: grey;
+            font-size: 12px;
+            /* 删除线 */
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="price">
+        <span class="miaosha">
+            $1650
+            <i></i>
+        </span>
+        <span class="origin">$3000</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 方法一
+    var star = '';
+    var k = 5;
+    for(var i = 1; i <= 5; i++) {
+        for(var j = 1; j <= k; j++) {
+            star += '❤';
+        }
+        k--;
+        star += '\n';
+    }
+    console.log(star);
+    // 方法二
+    var star = '';
+    for(var i = 1; i <= 5; i++) {
+        for(var j = i; j <= 5; j++) {
+            star += '❤';
+        }
+        star += '\n';
+    }
+    console.log(star);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

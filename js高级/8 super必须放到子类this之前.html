@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Fahter {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+    
+        // 子类在构造函数中使用super，必须放到this前面（必须先调用父类的构造方法，再使用子类构造方法）
+        class Son extends Fahter {
+            constructor(x, y) {
+                super(x, y);
+                this.x = x;
+                this.y = y;
+            }
+            subtract() {
+                console.log(this.x - this.y);
+            }
+        }
+        var son = new Son(5, 4);
+        son.subtract();
+        son.sum();
+    </script>
+</body>
+
+</html>

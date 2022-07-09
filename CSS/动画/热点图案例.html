@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            position: relative;
+            width: 700px;
+            height: 600px;
+            background-color: antiquewhite;
+            margin: 0 auto;
+        }
+
+        .city {
+            position: absolute;
+            top: 300px;
+            right: 300px;
+        }
+
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .city div[class^='pulse'] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 10px red;
+            border-radius: 50%;
+            animation: pulse 1s linear infinite;
+        }
+
+        .city div.pulse2 {
+            animation-delay: 0.3s;
+        }
+
+        .city div.pulse3 {
+            animation-delay: 0.7s;
+        } 
+
+        @keyframes pulse {
+            0% {}
+
+            ;
+
+            70% {
+                /* 单纯改变宽和高  如果是scale会把阴影也放大 效果不好 */
+                width: 40px;
+                height: 40px;
+                /* 透明度 */
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                /* 透明度 */
+                opacity: 0;
+            }
+        }
+    </style>
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

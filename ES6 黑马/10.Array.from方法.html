@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array.from方法</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 将类（伪）数组或可遍历对象转换为真正的数组
+		var arrayLike = {
+			"0": "张三",
+			"1": "李四",
+			"2": "王五",
+			"length": 3
+		}
+		var arr = Array.from(arrayLike);
+		console.log(arr)
+		
+		var arrayLike = {
+			"0": 1,
+			"1": 2,
+			// "length": 2
+		}
+		// 还可以接受第二个参数 类似map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+		// 数组中有多少个元素 函数就会被调用多少次
+		var ary = Array.from(arrayLike, item => item * 2)
+		console.log(ary)
+	</script>
+</body>
+</html>

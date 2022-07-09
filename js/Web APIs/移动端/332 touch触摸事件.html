@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        // touch 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可响应用户手指（或触控笔）对屏幕或者触控板操作
+        // 手指触摸
+        div.addEventListener('touchstart', function(){
+            console.log('yyds');
+        })
+        // 手指滑动
+        div.addEventListener('touchmove', function(){
+            console.log('华子恺sb');
+        })
+        // 手指移开
+        div.addEventListener('touchend', function(){
+            console.log('黄秀玲sb');
+        })
+    </script>
+</body>
+</html>

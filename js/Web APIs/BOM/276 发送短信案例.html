@@ -1,0 +1,40 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        手机号：<input type="number" name="" id="">
+        <button>发送</button>
+        <script>
+        var ipt = document.querySelector('input');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            this.disabled = true;
+            var i = 3;
+            countDown();
+            var timer = setInterval(countDown, 1000);
+            function countDown() {
+                if (i == 0) {
+                    clearInterval(timer);
+                    // 函数的调用者是window 所以不能写this
+                    btn.disabled = false;
+                    btn.innerHTML = '发送';
+                    i = 3;
+                } else {
+                    btn.innerHTML = '还剩下' + i + '秒';
+                    i--;
+                }
+            }
+        })
+    </script>
+    
+    </body>
+
+    </html>

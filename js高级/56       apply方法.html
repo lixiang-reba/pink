@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JavaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部 this 的指向问题，常用的有 bind()、call()、apply() 三种方法。-->
+    <!-- fun.apply(thisArg,[argsArray])
+         thisArg:在fun函数运行时指定的this值
+         argsArray：传递的值，必须包含在数组里面
+         返回值是函数的返回值，因为它就是调用函数 
+    -->
+    <script>
+        var o = {
+            name: 'andy'
+        };
+        var arr1 = [1, 66, 3, 99, 4];
+        function fn(arr1) {
+            console.log(this);
+            // 输出的不是数组 是字符串 
+            console.log(arr1);
+        };
+        fn.apply(o, arr1)
+
+        //1.也是调用函数  第二个可以改变函数内部的this指向
+        //2.但是他的参数必须是数组（伪数组）
+        //3.apply的主要应用 比如我们可以利用apply借助于数学内置对象求最大值
+        // Math.max();
+    </script>
+</body>
+
+</html>

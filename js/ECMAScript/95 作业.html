@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var input = prompt('请输入您想要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出');
+        switch (input) {
+            case '1':
+                var money = prompt('请输入要存的钱数:');
+                var total = 100 + parseFloat(money);
+                alert('您现在的钱数是' + total + '元');
+                break;
+            case '2':
+                var money = prompt('请输入要取的钱数:');
+                var total = 100 - parseFloat(money);
+                alert('您现在的钱数是' + total + '元');
+                break;
+            case '3':
+                alert('您的余额为100元');
+                break;
+            default:
+                alert('退出信息框');  
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

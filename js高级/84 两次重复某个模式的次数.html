@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="uname"> <span class="message">请输入用户名</span>
+    <script>
+        //量词是设定某个模式出现的次数
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+        console.log(reg.test('a'));
+        console.log(reg.test('8'));
+        console.log(reg.test('18'));
+        console.log(reg.test('aa'));
+        console.log('---------');
+        console.log(reg.test('aa'));//false
+        console.log(reg.test('andy-red'));//true
+        console.log(reg.test('aandy_red'));//true
+        console.log(reg.test('andy!007'));//false
+    </script>
+</body>
+</html>

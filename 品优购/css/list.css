@@ -1,0 +1,101 @@
+.sk {
+    position: absolute;
+    left: 186px;
+    top: 43px;
+    border-left: 1px solid #b1191a;
+    padding: 3px 0 0 14px;
+}
+.nav {
+    line-height: 47px;
+    overflow: hidden;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a {
+    padding: 0 28px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a {
+    float: left;
+    padding: 0 24px;
+    font-size: 14px;
+}
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    margin-right: 13px;
+    /* 目的是防止 鼠标经过显示边框时 盒子大小会变化 */
+    border:1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n) {
+    margin: 0;
+}
+.sk_bd ul li:hover {
+    border:1px solid #b1191a;
+}
+.sk_bd ul li .info {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.price_now,
+.price_past {
+    margin-left: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+.price_now {
+    font-size: 22px;
+    color: #e60012;
+}
+.price_past {
+    text-decoration: line-through;
+}
+.sale {
+    padding: 0 14px;
+}
+.bar {
+    display: inline-block;
+    width: 134px;
+    height: 12px;
+    margin: 0 10px;
+    border: 1px solid #e60012;
+    text-align: center;
+    border-radius: 6px;
+}
+.bar_in {
+    width: 87%;
+    height: 100%;
+    background-color: #e60012;
+}
+.sale em {
+    color: #e60012;
+}
+.buy {
+    width: 100%;
+    height: 50px;
+    background-color: #b1191a;
+    margin-top: 14px;
+    text-align: center;
+    line-height: 50px;
+}
+.buy a {
+    color: #fff;
+    font-size: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>213</div>
+    <script>
+        // 事件对象
+        // 1 event就是一个事件对象 写到我们侦听函数的小括号里面 当形参来看
+        // 2 事件对象只有有了事件才能存在 它是系统自动创建的 不需要传递参数
+        // 3 事件对象 是事件的一系列相关数据的集合
+        // 4 事件对象可以自己命名 如evt、e、event
+    
+
+        // event代表事件的状态，简单说：事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，
+        // 这个对象就是事件对象 event，它有很多属性和方法。
+
+        var div = document.querySelector('div');
+        // div.onclick = function (event) {
+        //     console.log(event);
+        // }
+        div.addEventListener('click', function (e) {
+            console.log(e);
+        }) 
+
+    </script>
+</body>
+
+</html>

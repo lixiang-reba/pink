@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 1 数组合并
+        const male = ['hzk'];
+        const female = ['hxl', 'wxm'];
+        const sb = [...male,...female];
+        console.log(sb);
+
+        // 2 数组克隆
+        const nb = ['lxx'];
+        const lx = [...nb];
+        console.log(lx);
+
+        // 3 将伪书组转为真正数组
+        const div = document.querySelectorAll('div');
+        console.log(div);
+        const divArr = [...div];
+        console.log(divArr);
+    </script>
+</body>
+
+</html>

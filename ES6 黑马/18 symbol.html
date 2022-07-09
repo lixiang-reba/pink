@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Symbol是ES6中引入的一种新的基本数据类型，用于表示一个独一无二的值。
+        它是JavaScript中的第七种数据类型，与undefined、null、Number（数值）、String（字符串）、Boolean（布尔值）、Object（对象）并列。
+        所以说如果你想问js引擎a的值是多少，引擎只会告诉你它是一个Symbol类型的值。也就是说，Symbol真正存储了什么并不重要，
+        重要的是它的值永远不会与别的值相等。Symbol的中文释义为“标志，符号”，一个Symbol类型的变量只是为了标记一块唯一的内存而存在的。
+        也正是因为这样，Symbol类型的值不参与运算。
+     -->
+    <script>
+        const a = Symbol('lxx');
+        const b = Symbol('lxx');
+        console.log(a === b);
+
+        let uname = Symbol('uname');
+        console.log(uname);
+        let obj = {
+            age: 18,
+            // symbol定义的变量 取值时要用[]
+            [uname]: 'lxx'    
+        }
+        console.log(obj[uname]);
+        // 无法遍历到
+        console.log(Object.keys(obj));
+        // 获取symbol声明的属性名的方法 了解
+        let s = Object.getOwnPropertySymbols(obj);
+        console.log(s[0]);
+    </script>
+</body>
+
+</html>

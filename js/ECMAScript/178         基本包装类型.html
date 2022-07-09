@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = '1234';
+        console.log(str.length);
+        // 基本包装类型：就是把简单数据类型包装成了复杂数据类型 上例就是把字符串包装成对象
+        // 1. 把字符串包装成对象
+        var temp = new String('1234');
+        // 2.把临时变量的值给str
+        str = temp;
+        // 3.销毁这个临时变量
+        temp = null;
+
+        var arr = new Object('1234');
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

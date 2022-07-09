@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值 这被称为解构赋值
+        // 数组是顺序赋值   对象是同名赋值
+        // 1 数组的解构（使用较少）
+        const F4 = ['lx', 'xh', 'cj', 'hzk'];
+        let [l, x, c, h] = F4;
+        console.log(h);
+
+        // 2 对象的解构
+
+        const li = {
+            name: 'Lxx',
+            age: '18',
+            daQiu: function () {
+                console.log('lanqiu');
+            }
+        };
+        // 必须写同名属性才能赋值
+        let { name, age, daQiu } = li;
+        console.log(name);
+        console.log(daQiu);
+        daQiu();
+
+    </script>
+</body>
+
+</html>

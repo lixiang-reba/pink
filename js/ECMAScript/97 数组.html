@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数组 就是一组数据存储在单个变量下
+        // 利用new创建数组 了解
+        var arr = new Array();
+        // 利用数组字面量创建数组 最常用
+        var arr = [1, 2, 3, 'nima'];
+        console.log(arr);
+        // 获取数组中的元素
+        // 数组的索引
+        console.log(arr[0]);
+        // 遍历数组
+        var num = [1, 2, 3, 4, 5, 6];
+        // 动态监测数组元素个数
+        for (var i = 0; i < num.length; i++) {
+            console.log(num[i]);
+        }
+        // 求和、平均值
+        var element = [2, 6, 1, 7, 4];
+        var sum = 0;
+        var average = 0;
+        for (i = 0; i < element.length; i++) {
+            sum += element[i];
+        }
+        average = sum / element.length;
+        // 想要输出多个变量 用逗号
+        console.log(sum, average);
+
+        // 最大值
+        var xh = [2, 6, 1, 7, 4];
+        var max = xh[0];
+        for (i = 0; i < xh.length; i++) {
+            if (xh[i] > max) {
+                max = xh[i];
+            }
+        }
+        console.log('最大值为' + max);
+        // 数组转换为字符串
+        var color = ['red', 'blue','pink'];
+        var str = '';
+        var sep = ' ';
+        for (i = 0; i < color.length; i++) {
+            str += color[i] + sep;
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

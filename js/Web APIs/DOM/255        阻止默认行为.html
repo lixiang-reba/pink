@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 常见事件对象的属性和方法 -->
+    <img src="images/事件对象.png" alt="">
+    <div>1312</div>
+    <a href="www.baidu.com">百度</a>
+    <form action="#">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+        // 1 返回事件类型
+        var div = document.querySelector('div');
+        div.addEventListener('click', fn);
+        div.addEventListener('mouseover', fn);
+        div.addEventListener('mouseout', fn);
+        function fn(e) {
+            console.log(e.type);
+        }
+        // 2 阻止默认行为 让链接不跳转 让提交按钮不提交
+        var a = document.querySelector('a');
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

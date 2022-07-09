@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>剩余参数</title>
+</head>
+
+<body>
+	<!-- 剩余参数语法允许我们将一个不定数量的参数表示为一个数组 -->
+	<script type="text/javascript">
+		let ary1 = ['张三' , '李四', '王五'];
+		let[s1,...s2] = ary1;
+		console.log(s1)
+		console.log(s2)
+		const sum = (...args) => {
+			let total = 0;
+			args.forEach(item => total += item);
+			return total;
+		};
+		console.log(sum(1,2,3,5));
+	</script>
+</body>
+
+</html>

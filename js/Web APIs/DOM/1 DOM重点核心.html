@@ -1,0 +1,27 @@
+
+<!-- 
+      DOM是处理可扩展标记语言的标准编程接口，通过这些接口可以改变网页的内容、结构和样式
+      文档：一个页面就是一个文档，dom中用document表示
+      元素：页面中所有标签都是元素，dom中使用element表示
+      节点：网页中所有内容都是节点（标签、属性、文本、注释），dom中使用node表示
+      DOM把以上内容都看作是对象
+    关于dom操作，我们主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作。
+    1 创建：document.write
+          innerHTML
+          createElement
+    2 增：appendChild
+          insertBefore
+    3 删：removeChild
+    4 改：主要修改dom的元素属性，dom元素的内容、属性, 表单的值等
+          修改元素属性： src、href、title等
+          修改普通元素内容： innerHTML 、innerText
+          修改表单元素： value、type、disabled等
+          修改元素样式： style、className
+    5 查：DOM提供的API 方法：  getElementById、getElementsByTagName  古老用法 不太推荐 
+          H5提供的新方法： querySelector、querySelectorAll   提倡
+          利用节点操作获取元素： 父(parentNode)、子(children)、兄(previousElementSibling、nextElementSibling)  提倡
+    6 属性操作：setAttribute：设置dom的属性值
+               getAttribute：得到dom的属性值
+               removeAttribute移除属性
+    7 事件操作：给元素注册事件， 采取  事件源.事件类型 = 事件处理程序
+ -->

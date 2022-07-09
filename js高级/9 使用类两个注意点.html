@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        // 1 在ES6中类没有变量提升，所以必须先定义类，才能通过类实例化对象
+        class Star {
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+                // 2 类里面的共有属性和方法一定要加 this 使用
+                // this.sing();
+                this.btn = document.querySelector('button');
+                // 不要加小括号 加了就相当于调用了函数
+                this.btn.onclick = this.sing;
+            }
+            sing() {
+                console.log(this.uname);
+            }
+        }
+        var lxx = new Star('李响');
+        lxx.sing();
+    </script>
+</body>
+
+</html>

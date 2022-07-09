@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="lx">
+        <div class="xh"></div>
+        <div class="cj"></div>
+    </div>
+    <script>
+        var xh = document.querySelector('.xh');
+        console.log(xh.parentNode);
+        var lx = document.querySelector('.lx');
+        // childnotes得到所有的子节点 包含元素节点 文本节点 每个换行都是一个文本节点
+       console.log(lx.childNodes);
+        // 元素节点  nodeType  为 1
+        // 属性节点  nodeType  为 2
+        // 文本节点  nodeType  为 3 （文本节点包含文字、空格、换行等）
+
+        console.log(lx.childNodes[0].nodeType);
+        console.log(lx.childNodes[1].nodeType);
+        // 只获得元素节点 最常用
+        console.log(lx.children);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fat {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .son {
+            /* 括号内可以加减乘除 */
+            width: calc(100% - 20px);
+            height: 50%;
+            background-color: red;
+        }
+        .fat img {
+            /* 数值越大越模糊 */
+            filter: blur(2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fat">
+        <div class="son"></div>
+        <img src="images/audio.png" alt="" width="200px">
+    </div>
+</body>
+
+</html>

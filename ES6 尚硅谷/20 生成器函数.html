@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        生成器是一种返回迭代器的函数。通过 function 关键字后面 加 * 来定义，使用 yield 关键字返回迭代器
+        不能用箭头函数来生成迭代器
+     -->
+    <script>
+        function* createIterator() {
+            // yield可当作函数代码的分隔符
+            yield 1;
+            console.log(111);
+            yield 2;
+            console.log(222);
+            yield 3;
+            console.log(333);
+        }
+        // 生成器的调用方式和普通函数调用方式相同，只不过返回的是一个迭代器
+        let iterator = createIterator();
+        console.log(iterator);
+        console.log(iterator.next()); // 1
+        console.log(iterator.next()); // 2
+        console.log(iterator.next()); // 3
+        // 遍历
+        // for(let k of createIterator()) {
+        //     console.log(k);
+        // }
+    </script>
+</body>
+
+</html>

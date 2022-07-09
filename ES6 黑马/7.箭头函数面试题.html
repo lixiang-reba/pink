@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数面试题</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var age = 100;
+		// 对象不能产生作用域
+		var obj = {
+			age: 20,
+			say: () => {
+				alert(this.age)
+			}
+		}
+		obj.say();
+	</script>
+</body>
+</html>

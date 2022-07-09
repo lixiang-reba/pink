@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            width: 800px;
+            height: 40px;
+            margin: 100px auto;
+            background: #fff url('330筋斗云导航栏/images/rss.png') no-repeat right center;
+            line-height: 40px;
+            text-align: center;
+            list-style: none;
+        }
+
+        ul li {
+            flex: 1;
+            float: left;
+            z-index: 99;
+        }
+
+        ul li:hover {
+            color: #fff;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .green:hover {
+            color: green;
+        }
+
+        ul img {
+            position: absolute;
+            left: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <img src="330筋斗云导航栏/images/cloud.gif" alt="">
+        <li class="green">hzk</li>
+        <li>hzk</li>
+        <li>hzk</li>
+        <li>hzk</li>
+    </ul>
+    <script>
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    callback && callback();
+                }
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 15)
+        }
+        let img = document.querySelector('img');
+        let lis = document.querySelectorAll('li');
+        let current = 0;
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('mouseover', function () {
+                animate(img, this.offsetLeft + 55);
+            })
+            lis[i].addEventListener('mouseout', function () {
+                animate(img, current + 55);
+            })
+            lis[i].addEventListener('click', function () {
+                current = this.offsetLeft;
+            })
+        }
+    </script>
+</body>
+
+</html>

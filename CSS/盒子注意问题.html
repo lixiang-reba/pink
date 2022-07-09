@@ -1,0 +1,30 @@
+<!-- 
+    1 水平居中：
+    外边距可以让块级盒子水平居中， 但是必须满足两个条件：
+    ① 盒子必须指定了宽度（ width）。
+    ② 盒子左右的外边距都设置为 auto
+    以上方法是让块级元素水平居中， 行内元素或者行内块元素水平居中给其父元素添加 text-align:center 即可。
+
+    2 外边距合并
+    （1）相邻块元素垂直外边距的合并
+    （2）嵌套块元素垂直外边距的塌陷（浮动的盒子不会有此问题）
+        ① 可以为父元素定义上边框。
+        ② 可以为父元素定义上内边距。
+        ③ 可以为父元素添加 overflow:hidden。
+
+    3 如果一个盒子没有给定宽度/高度或者继承父亲的宽度/高度，则padding 不会影响本盒子大小
+
+    4 阴影
+    （1）盒子阴影：box-shadow: h-shadow v-shadow blur(模糊程度) spread(阴影大小) color inset;
+    注：默认外阴影  如果是外阴影 不需要写  写了反而不起作用
+
+    4 width、margin、padding
+    **width > padding >margin ** 原因:
+    i. margin 会有外边距合并还有ie6下面margin加倍的bug(讨厌）所以最后使用。
+    ii. padding 会影响盒子大小，需要进行加减计算（麻烦）其次使用。
+    iii. width 没有问题，我们经常使用宽度剩余法高度剩余法来做。
+
+    5 box-sizing 直接加在*布局中
+        (1). box-sizing: content-box 盒子大小为 width + padding + border （以前默认的）
+        (2). box-sizing: border-box 盒子大小为 width
+ -->

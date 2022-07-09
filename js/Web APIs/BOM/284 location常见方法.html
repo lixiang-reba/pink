@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // 记录浏览历史 可以实现后退功能 
+            // location.assign( 'https://developer.mozilla.org/zh-CN/docs/Web/API/Document?name=andy#link');
+            // 不记录浏览历史 不可以实现后退功能 
+            location.replace( 'https://developer.mozilla.org/zh-CN/docs/Web/API/Document?name=andy#link');
+            // 刷新页面 括号里是空是普通刷新 相当于浏览器上面的刷新(f5) 如果参数为true 是强制刷新 相当于 crtl+f5
+            // location.reload();
+        })
+    </script>
+</body>
+
+</html>

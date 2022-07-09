@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(123 && 456); // 456
+        console.log(0 && 456); // 0
+        console.log(123 && 456 && 789); // 789
+        console.log(123 || 456); // 123
+        console.log(0 || 456); // 456
+        console.log(123 || 456 || 789); // 123
+        var num = 0;
+        // num还是0
+        console.log(123 || num++);
+        console.log(num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

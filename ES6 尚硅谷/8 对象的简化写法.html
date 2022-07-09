@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 允许在大括号里面直接写入变量和函数 作为对象的属性和方法
+        let name = "bilibili"
+        let change = function () {
+            console.log('我是change')
+        }
+        const school = {
+            name,
+            change,
+            improve() {
+                console.log("你好啊aa")
+            }
+        }
+        console.log(school)
+
+    </script>
+</body>
+
+</html>

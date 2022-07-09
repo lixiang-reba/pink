@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+        .son {
+            position: absolute;
+            /* left: 50%; */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* translate优点：不影响其他盒子位置  但对行内标签无效*/
+            transform: translate(200px,200px);
+            /* transform: translateX(200px); */
+            /* transform: translateY(200px); */
+            /* 相对自己宽度的一半 */
+            /* transform: translateX(-50%); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

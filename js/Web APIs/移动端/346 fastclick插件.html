@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+    <script src="fastclick.js"></script>
+</head>
+
+<body>
+    <!-- 
+        JS 插件是 js 文件，它遵循一定规范编写，方便程序展示效果，拥有特定功能且方便调用。如轮播图和瀑布流插件。
+        特点：它一般是为了解决某个问题而专门存在，其功能单一，并且比较小。
+        我们以前写的animate.js 也算一个最简单的插件
+        GitHub官网地址： https://github.com/ftlabs/fastclick
+     -->
+    <div></div>
+    <script>
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                // 封装函数：页面中所有事件都取消了click延时问题了
+                FastClick.attach(document.body);
+            }, false);
+        }
+        var div = document.querySelector('div');
+        div.addEventListener('click', function() {
+            alert(11);
+        })
+    </script>
+</body>
+
+</html>

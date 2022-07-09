@@ -1,0 +1,12 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+div p {
+  color: red;
+  font-size: 20px;
+}
+div p:hover {
+  color: aqua;
+}

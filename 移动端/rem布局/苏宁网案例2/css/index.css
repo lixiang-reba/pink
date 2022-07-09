@@ -1,0 +1,52 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial,Helvetica;
+    background: #F2F2F2;
+}
+a {
+    text-decoration: none;
+    font-size: .3333rem;
+}
+/* 不要让页面超过750px */
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+/* 这个插件默认的html文字大小为16px */
+/* 顶部搜索框 */
+.search-content {
+    /* flexiable是根据当前屏幕划分的 */
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.1733rem;
+    background-color: #ae7bfe;
+}
+.search-content .classify {
+    width: .5867rem;
+    height: .9333rem;
+    background: url(../images/classify.png) no-repeat;
+    background-size: .5867rem .9333rem;
+    margin: .1467rem .3333rem .1333rem;
+  }
+  .search {
+      flex: 1;
+      background-color: red;
+  }
+  .login {
+      width: 1rem;
+      height: .9333rem;
+      margin: .1333rem;
+      color: #fff;
+      text-align: center;
+      line-height: .9333rem;
+  }
+  

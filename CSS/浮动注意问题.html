@@ -1,0 +1,31 @@
+<!-- 
+    网页布局第一准则： 多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动
+    1 清除浮动
+    清除浮动的本质是清除浮动元素造成的影响，如果父盒子本身有高度，则不需要清除浮动，清除浮动之后，
+    父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了。
+    语法：选择器{clear:both;}
+    （1）额外标签法(隔墙法)：会在浮动元素末尾添加一个空的块级标签。 例如 <div style=” clear:both” ></div>
+    （2）可以给父级添加 overflow 属性，将其属性值设置为 hidden、 auto 或 scroll 但无法显示溢出部分
+    （3）after伪元素法：给父级元素添加 
+    .clearfix:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix { /* IE6、 7 专有 */
+        *zoom: 1;
+    }
+        （4）双伪元素
+        .clearfix:before,.clearfix:after {
+            content:"";
+            display:table;
+        } .
+        clearfix:after {
+            clear:both;
+        } .
+        clearfix {
+            *zoom:1;
+        }
+    -->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 对象是一组无序的属性和方法的集合 所有事物都是对象 例如字符串、数值、数组、函数
+        // 创造对象
+        var obj = {
+            uname: 'lxx',
+            age: 18,
+            gender: '男',
+            sayHi: function () {
+                console.log('hi');
+            }
+        }
+        // 调用对象属性
+        // 方法一
+       console.log(obj.gender);
+        // 方法二
+        console.log(obj['gender']);
+        console.log(obj['sayHi']);
+        // 调用对象方法
+        obj.sayHi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        为了解决多层函数、方法的嵌套调用而存在
+        简单理解promise：把一层一层向内嵌套调用的方法，拉成一串连续调用的方法。
+        每个嵌套调用的方法，都向调用者返回this，也就是返回自身
+        然后带着上一次调用的结果 进入下一个嵌套调用的环节
+     -->
+    <script>
+        // 1 创建 Promise
+        // Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject。它们是两个函数，由 JavaScript 引擎提供，不用自己部署
+        // resolve函数的作用是：将Promise对象的状态从“未完成”变为“成功”,在异步操作成功时调用，并将异步操作的结果，作为参数传递出去
+        // reject函数反之
+        const promise = new Promise((resolve, reject) => {
+            //  如果异步操作成功
+            if (success) {
+                //如果 true ，把容器的状态改为 resolve
+                resolve(value)
+            } else {
+                //如果 false ，把容器的状态改为 reject
+                reject(error)
+            }
+        })
+        promise.then(function (value) {
+            // success
+        }, function (error) {
+            // failure
+        });
+        // 2
+    </script>
+</body>
+
+</html>

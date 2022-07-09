@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 程序中的继承：子类可以继承父类中的一些属性和方法。
+        // class Fahter {
+        //     constructor() {
+
+        //     }
+        //     money() {
+        //         console.log(100);
+        //     }
+        // }
+        // class Son extends Fahter {
+
+        // }
+        // var son = new Son();
+        // son.money();
+        
+        class Fahter {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+            say() {
+                return '我是爸爸';
+            }
+        }
+
+
+        class Son extends Fahter {
+            constructor(x, y) {
+                // this.x = x;
+                // this.y = y;
+                // super 关键字用于访问和调用对象父类上的函数，可以调用父类的构造函数，也可以调用父类的普通函数
+                super(x, y);
+            }
+            say() {
+                console.log(super.say() + '的儿子');
+            }
+        }
+        var son = new Son(1, 2);//先将参数传给子类构造函数 再通过super将子类的xy传给父类构造函数
+        son.sum();
+        son.say();
+        // 继承中，如果实例化子类输出一个方法，先看子类有没有这个方法，如果有就先执行子类的
+        // 继承中，如果子类里面没有，就去查找父类有没有这个方法，如果有，就执行父类的这个方法（就近原则）
+    </script>
+</body>
+
+</html>

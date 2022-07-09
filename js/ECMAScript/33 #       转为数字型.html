@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var age = prompt('请输入年龄：');
+        console.log(age);
+        // 1.字符型转化为数字型 得到的是整数
+        console.log(parseInt(age));
+        // 取整
+        console.log(parseInt('3.88'));
+        // 去掉单位
+        console.log(parseInt('3.88px'));
+        // NaN 数字只能出现在开头
+        console.log(parseInt('LXX3.88px'));
+        // 2.字符型转化为数字型 得到小数
+        console.log(parseFloat('3.88'));
+        // 3.利用Number转换
+        var str = '1243';
+        console.log(Number(str));
+        // 4.利用算术运算 隐式转换 但不可以用加号  因为字符加什么都变成字符
+        console.log('12'-0);
+    </script>
+</head>
+<body>
+</body>
+</html>

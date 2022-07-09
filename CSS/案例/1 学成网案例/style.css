@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix { /* IE6、 7 专有 */
+    *zoom: 1;
+}
+body {
+    background-color: #f3f5f7;
+    height: 2000px;
+}
+.w {
+    width: 1200px;
+    margin: auto;
+    }
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;   
+}
+.header {
+    height: 40px;
+    margin: 30px auto;
+}
+.logo {
+    float: left;
+    width: 265px;
+    height: 42px;
+    background: url(images/logo.png) no-repeat;
+}
+.nav {
+    float: left;
+    width: 320px;
+}
+.nav li {
+    float: left;
+    margin-right: 20px;
+}
+.nav li a {
+    display: block;
+    height: 40px;
+    line-height: 42px;
+    padding: 0 10px;
+    color: #050505;
+    font-size: 16px;
+}
+.nav li:hover a {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+.search {
+    float: left;
+    height: 38px;
+}
+.search input {
+    float: left;
+    height: 100%;
+    width: 340px;
+    border: 1px solid #00a4ff;
+    padding-left: 20px;
+    outline: none;
+}
+.search button {
+    border: 0;
+    background: url(images/btn.png) no-repeat;
+}
+.user {
+    float: right;
+    /* 不要给宽度 因为不确定用户名多长 */
+    /* width: 120px; */
+    height: 40px;
+    margin-right: 30px;
+    color: #a7a8a9;
+    line-height: 40px;
+}
+.user a {
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;  
+}
+.banner {
+
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .w {
+    position: relative;
+    /* 没给高度装不了背景 */
+    height: 420px;
+    background: url(images/banner2.png) no-repeat top center;
+}
+.subnav {
+    float: left;
+    width: 150px;
+    height: 380px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+.subnav li {
+    height: 45px;
+}
+.subnav li a {
+    color: #fff;
+    font-size: 14px;
+}
+.subnav li em {
+    float: right;
+}
+.subnav li:hover a {
+    color: #00a4ff;
+}
+.banner .course {
+    float: right;
+    width: 230px;
+    /* 浮动的盒子不会有外边距合并问题 */
+    margin-top: 50px;
+    background-color: #fff;
+}
+.banner .course dt {
+    height: 50px;
+    background-color: #9bceea;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+}
+.banner .course dd {
+    margin: 0 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.banner .course dd h4 {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+.banner .course dd p {
+    color: #c6c6c6;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.banner .course dd a {
+    display: block;
+    height: 38px;
+    border:1px solid #00a4ff;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* 小圆点制作 */
+.circle {
+    position: absolute;
+    bottom: 30px;
+    left: 485px;
+    width: 180px;
+    height: 22px;
+}
+.circle li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, .4);
+    margin: 5px 8px;
+    border-radius: 50%;
+}
+.circle .current {
+    width: 19px;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+.recom {
+    height: 60px;
+    margin-top: 8px;
+    text-align: center;
+    box-shadow: 1px 3px 5px 3px rgba(0, 0, 0, .1);
+}
+.recom li {
+    float: left;
+    width: 125px;
+    height: 16px;
+    margin-top: 23px;
+    /* 这里如何处理比较好 */
+    border-right: 1px solid #bfbfbf;
+    color: #00a4ff;
+}
+.recom li:last-child {
+    border: 0;
+}
+.recom li a {
+    color: #050505;
+}
+.recom .interest {
+    float: right;
+    margin-right: 25px;
+    color: #00a4ff;
+    line-height: 60px;
+}
+.box {
+    margin-top: 35px;
+    background-color: #f3f5f7;
+}
+.box .box-hd {
+    height: 42px;
+}
+.box .box-hd h3 {
+    float: left;
+    color: #494949;
+    font-size: 20px;
+}
+.box-hd a {
+    float: right;
+    margin-top: 8px;
+    margin-right: 16px;
+    color: #a5a5a5;
+    font-size: 12px;
+}
+.box-bd li {
+    position: relative;
+    float: left;
+    width: 228px;
+    margin-right: 15px;
+    margin-bottom: 14px;
+    background-color: #fff;
+}
+/* 或者把ul改的足够宽 见p216 */
+.box-bd li:nth-child(5n) {
+    float: right;
+    margin: 0;
+}
+.box-bd li>img {
+    width: 100%;
+}
+.box-bd li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+.box-bd li h4 {
+    margin: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.box-bd li .info {
+    height: 40px;
+    padding-left: 25px;
+    color: #b8b8b8;
+    font-size: 12px;
+}
+.box-bd li .info span {
+    color: #ff7c2d;
+}
+.footer {
+    height: 360px;
+    margin-top: 26px;
+    background-color: #fff;
+    
+}
+.footer .w {
+    width: 1160px;
+    padding: 30px 20px;
+    
+}
+.footer .copyright {
+    float: left;
+    width: 430px;
+    height: 150px;
+}
+.copyright img {
+    margin-bottom: 25px;
+}
+.copyright p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 12px;
+}
+.copyright a {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    /* 33还是35？ */
+    line-height: 33px;
+    text-align: center;
+}
+.footer .link dl {
+    float: right;
+    margin-top: 35px;
+    /* margin-left: 100px; */
+}
+/* 法二 见上面注释 */
+.footer .link dl:last-child,
+.footer .link dl:nth-child(2) {
+    width: 225px;
+}
+.footer .link dl dd a {
+    height: 22px;
+    color: #333333;
+    font-size: 12px;
+}
+.footer .link dl dt {
+    height: 30px;
+    color: #7d7d7d;
+    font-size: 18px;
+}

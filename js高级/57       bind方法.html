@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        bind()方法不会调用函数，但是能改变函数内部的this指向
+        fun.bind(thisArg,arg1,arg2,...)
+        thisArg:在fun函数运行时指定的this值
+        arg1，arg2：传递的其他参数
+        返回由指定的this值和初始化参数改造的原函数拷贝
+     -->
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <script>
+        
+        var o = {
+            name: 'andy'
+        };
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+        }
+        var f = fn.bind(o);
+        f(1, 4);
+        //1.不会调用原来的函数  可以改变原来函数内部的this指向
+        //2.返回的是原函数  this指回产生的新函数
+        //3.如果有的函数不需要我们立即调用，但是又想改变这个函数内部的this指向，此时用bind
+        //4.我们有一个按钮，当我们点击了之后，就禁用这个按钮，3秒钟之后开启这个按钮
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                this.disabled = true;
+                setTimeout(function () {
+                    this.disabled = false;
+                }.bind(this), 2000);
+            }
+        }
+    </script>
+</body>
+
+</html>

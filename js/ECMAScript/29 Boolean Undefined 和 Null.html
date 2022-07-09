@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(true + 1); // 2
+        console.log(false + 1); // 1
+        var variable;
+        console.log(variable); // undefined
+        console.log('你好' + variable); // 你好undefined
+        console.log(11 + variable); // NaN
+        console.log(true + variable); // NaN
+        // 一个声明变量给 null 值，里面存的值为空
+        var vari = null;
+        console.log('你好' + vari); // 你好null
+        console.log(11 + vari); // 11
+        console.log(true + vari); // 1
+    </script>
+</head>
+<body> 
+</body>
+</html>

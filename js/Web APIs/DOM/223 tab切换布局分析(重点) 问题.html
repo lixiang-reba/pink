@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tab {
+            width: 1000px;
+            margin: 100px auto;
+        }
+
+        .tab-list {
+            height: 40px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab-list li {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .tab-list .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab-list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（50000）</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab-con">
+            <div class="item" style="display: block;">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价（50000）模块内容
+            </div>
+            <div class="item">
+                手机社区模块内容
+            </div>
+        </div>
+    </div>
+    <script>
+        var lis = document.querySelector('.tab-list').querySelectorAll('li');
+        var items = document.querySelector('.tab-con').querySelectorAll('.item');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].setAttribute('index',i);
+            lis[i].onclick = function () {
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].className = '';
+                    items[j].style.display = 'none';
+                }
+                this.className = 'current';
+               var index = this.getAttribute('index');
+                items[index].style.display = 'block';
+                // 当for循环中对于变量i使用 var 关键字，它声明的变量是全局的，包括循环体内与循环体外。
+                // 当循环体内绑定单击响应函数，输出的i是li.length-1，当点击事件发生时，i 首先会去块级作用域去找，
+                // 当找不到时就会去全局作用域中去找。此时 i 做为全局变量，i的值为i循环后在for循环内限制的结果，为li.length-1。
+                // items[i].style.display = 'block'; 
+                // 调试：先设置一个断点  再点击事件  再回到断点
+            }
+        }
+    </script>
+</body>
+
+</html>

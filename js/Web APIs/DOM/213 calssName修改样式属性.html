@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .change {
+           background-color: pink;
+           font-size: 25px;
+           color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">连续性</div>
+    <script>
+        var text = document.querySelector('div');
+        text.onclick = function () {
+            // this.style.backgroundColor = 'pink';
+            // this.style.color = 'red';
+            // this.style.fontSize = '30px';
+            // 让当前元素的类名改成change
+            // 适用于改变样式较多情况
+            // 保留了原类名
+            this.className = 'first change';
+            
+        }
+    </script>
+</body>
+
+</html>

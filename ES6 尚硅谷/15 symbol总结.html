@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Symbol是ES6中引入的一种新的基本数据类型，用于表示一个独一无二的值。
+        它是JavaScript中的第七种数据类型，与undefined、null、Number（数值）、String（字符串）、Boolean（布尔值）、Object（对象）并列。
+        所以说如果你想问js引擎a的值是多少，引擎只会告诉你它是一个Symbol类型的值。也就是说，Symbol真正存储了什么并不重要，
+        重要的是它的值永远不会与别的值相等。Symbol的中文释义为“标志，符号”，一个Symbol类型的变量只是为了标记一块唯一的内存而存在的。
+        也正是因为这样，Symbol类型的值不参与运算。
+     -->
+    <script>
+        let a = Symbol(223);
+        // a变量拿到了内存中某块内存的唯一引用（这里所说的引用，其实就是该内存的地址）。如果不借助a变量，你不可能再得到这个地址。
+        console.log(a);
+        // 借助变量a，变量c拿到了a指向的那个对象的地址，因此两者相等
+        let c = a;
+        console.log(c === a);
+    </script>
+</body>
+</html>

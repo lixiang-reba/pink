@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        var that = 0;
+        class Star {
+            constructor(uname, age) {
+                // 构造函数中的this指向创建的实例对象
+                that = this;
+                console.log(this);
+                this.uname = uname;
+                this.age = age;
+                this.btn = document.querySelector('button');
+                // this.btn.uname = 'xh的爸爸'
+                this.btn.onclick = this.sing;
+            }
+            sing() {
+                // 方法中的this指向的是方法调用者
+                console.log(this);
+                // console.log(this.uname);
+                console.log(that.uname);  
+            }
+        }
+        var lxx = new Star('李响');
+    </script>
+</body>
+
+</html>

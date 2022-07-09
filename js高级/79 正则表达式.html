@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        在JavaScript中，可以通过两种方式创建一个正则表达式
+
+        1.通过调用RegExp对象的构造函数创建
+         var regexp = new RegExp(/表达式/);
+
+        2.通过字面量创建 
+        var 变量名 = /表达式/
+
+        测试正则表达式 test 
+        test()正则对象方法,用于检测字符串是否符合该规则,该对象会返回true或false ,其参数是测试字符串。
+
+        regexObj.test(str)
+
+        regexObj是写的正则表达式
+        str我们要测试的文本
+        就是检测str文本是否符合我们写的正则表达式规范.
+     -->
+    <script>
+        //正则表达式在js中的使用
+        //1.利用RegExp对象来创建 正则表达式
+        var regexp = new RegExp(/123/);
+        console.log(regexp);
+        //2.利用字面量创建正则表达式
+        var rg = /123/;
+        //3.test方法用来检测字符串是否符合正则表达式要求的规范
+        console.log(rg.test(1234));//true
+        console.log(rg.test('abc'));//false
+    </script>
+</body>
+</html>

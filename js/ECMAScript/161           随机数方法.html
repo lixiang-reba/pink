@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 得到两个数之间的随机整数 并且包含这两个数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        var arr = ['郑烨', '华子恺', '王秀梅', '黄秀玲']
+        console.log(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

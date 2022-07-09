@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        大括号 量词符 里面表示重复次数
+        中括号 字符集合 匹配方括号中的任意字符
+        小括号 表示优先级
+        在线测试网址：https://c.runoob.com
+     -->
+    <script>
+        //中括号 字符集合 匹配方括号中的任意字符
+        var reg = /^[abc]$/;
+        //a 也可以 b也可以 c也可以
+        //大括号，量词符，里面表示重复次数
+        var reg = /^abc{3}$/;//只是让c重复三次
+        console.log(reg.test('abc'));
+        console.log(reg.test('abcabcabc'));
+        console.log(reg.test('abccc'));
+        //小括号 表示优先级
+        var reg = /^(abc){3}$/;//让abc重复三次
+ 
+    </script>
+</body>
+</html>

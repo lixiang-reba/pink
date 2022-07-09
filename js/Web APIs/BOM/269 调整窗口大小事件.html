@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>3124</div>
+    <script>
+        // 加完这个  div就可以放在下面了
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div');
+            // 只要窗口大小像素改变 就会触发
+            window.addEventListener('resize', function () {
+                // console.log('变化了');
+                // window.innerWidth:当前屏幕的宽度
+                console.log(window.innerWidth);
+                if (window.innerWidth < 600) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

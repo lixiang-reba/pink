@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        some()
+        array.some(function(currentValue,index,arr)) 
+        some()方法用于检测数组中的元素是否满足指定条件.通俗点查找数组中是否有满足条件的元素
+        注意它返回值是布尔值如果查找到这个元素,就返回true,如果查找不到就返回false.
+        如果找到第一个满足条件的元素则终止循环不在继续查找
+        currentValue:数组当前项的值
+        index :数组当前项的索引
+        arr :数组对象本身
+     -->
+    <script>
+        var arr = [1, 2, 33, 54];
+        var flag = arr.some(function (value) {
+            return value > 20;
+        })
+        console.log(flag);
+        var arr1 = ['hzk', 'hxl', 'wxm'];
+        var flag1 = arr1.some(function(value) {
+            return value = 'hzk';
+        })
+        console.log(flag1);
+    </script>
+    
+</body>
+
+</html>
